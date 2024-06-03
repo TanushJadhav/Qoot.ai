@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(180deg, rgba(25, 0, 25, 0.90) 0%, rgba(43, 18, 76, 0.87) 24.06%, rgba(82, 43, 91, 0.84) 51.4%, rgba(133, 79, 108, 0.81) 72.06%, rgba(223, 182, 178, 0.78) 90.89%, rgba(251, 228, 216, 0.74) 100%);
+        }
+
+        .box {
+            background: #fff;
+            width: 500px;
+            height: 200px;  /* Added 'px' here for height */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        .box h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .box h2::after {
+            content: '';
+            width: 140px;
+            height: 2px;
+            border-radius: 3px;
+            background: rgb(23, 124, 229);
+            position: absolute;
+            bottom: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .box blockquote {
+            font-size: 26px;
+            min-height: 110px;
+        }
+
+        .box blockquote::before,
+        .box blockquote::after {
+            content: '"';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Generated Quote</h2>
+        <blockquote>{{ generated_quote }}</blockquote>  <!-- Insert the generated quote here -->
+    </div>
+</body>
+</html>
